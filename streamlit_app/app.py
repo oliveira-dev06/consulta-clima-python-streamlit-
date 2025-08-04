@@ -14,10 +14,8 @@ if st.button("Confirmar"):
 
     temperatura = dados['main']['temp']
     descricao = dados['weather'][0]['description']
-
     st.write(f" {cidade} está com {temperatura}°C")
     st.write(f"Condição: {descricao}")
-
     if temperatura >= 26:
         st.image('img/calor.png')
         st.write("🌞 Passa o protetor, porque hoje está quente ein!")
@@ -29,8 +27,6 @@ if st.button("Confirmar"):
     else:
         st.image("img/frio.png")
         st.write("⛄ Pega um agasalho, porque hoje está frio!")
-
-    
 
 if st.button("Limpar"):
     st.session_state['cidade'] = ""
